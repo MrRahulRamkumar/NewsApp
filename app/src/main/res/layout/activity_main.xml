@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_gray"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_gray"
+        android:divider="@color/my_gray"
+        android:dividerHeight="4dp"
+        android:drawSelectorOnTop="true">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/fetching_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progress_bar"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="8dp"
+        android:text="@string/fetching_news"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true" />
+
+    <Button
+        android:id="@+id/try_again"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fetching_news"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:text="@string/try_again"
+        android:textColor="@color/colorAccent"/>
+
+</RelativeLayout>
